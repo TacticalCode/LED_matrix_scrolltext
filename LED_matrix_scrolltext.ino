@@ -67,6 +67,8 @@ void loop()
 						// do the display magic
 						if((font8x8_basic[text[(c+s)/num_cols]][r] >> (c+s)%num_cols) & bitmask)
 							digitalWrite(start_cols + (2*c), HIGH);
+						else
+							digitalWrite(start_cols + (2*c), LOW);
 					}
 					// but we want a blank display at the end, looks smooth
 					else
